@@ -64,6 +64,12 @@ exchanged. A red light means the connection failed.
 
 .. figure:: images/federation-1.png
 
+If the light does not turn green sometimes it helps to enter the server it self as a trusted server and manually trigger the syncronisation of addresses by running the cronjob (up to) twice on both ends for the shared secret exchange and then on both servers trigger::
+
+ occ dav:sync-system-addressbook
+ occ federation:sync-addressbooks
+
+
 .. _label-public-link-share:
 
 Creating Federation Shares via public Link Share
